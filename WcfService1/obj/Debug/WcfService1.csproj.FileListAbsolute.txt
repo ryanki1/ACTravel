@@ -1,0 +1,1 @@
+C:\Users\ryanki1\Documents\Visual Studio 2012\Projects\AddCon_TravellingSalesman\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
