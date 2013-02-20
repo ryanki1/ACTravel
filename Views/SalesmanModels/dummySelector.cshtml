@@ -1,0 +1,14 @@
+@using AddCon_TravellingSalesman.Models
+
+@{
+    ViewBag.Title = "dummySelector";
+}
+
+<h2>dummySelector</h2>
+
+@foreach (SalesmanModel sm in Model)
+ {
+    <span>First Name: @sm.FirstName</span>
+    <span>Last Name: @sm.LastName</span>  
+    <br />  
+ }    

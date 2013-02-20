@@ -1,0 +1,13 @@
+﻿<script type="text/javascript">
+    $("html").addClass("tut");
+</script>
+
+<script type="text/javascript">
+
+    function initGeoRank() {
+        debugger;
+        app.reset();
+        app.getUserCoordinates({ errorFlag: false }, app.geoRankingCallbackSuccess, app.geoRankingCallbackError); // Results stored in localStorage
+    }
+    initGeoRank();
+</script>

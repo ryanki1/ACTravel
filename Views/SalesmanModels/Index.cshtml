@@ -1,0 +1,26 @@
+@model IEnumerable<AddCon_TravellingSalesman.Models.SalesmanModel>
+
+@{
+    ViewBag.PageId = "salesmanCollectionPage";
+    ViewBag.Controller = "SalesmanModels";
+    ViewBag.Title = "Index";
+    ViewBag.Latitude = 0; // For consistency with Details page
+    ViewBag.Longitude = 0;
+}
+
+@section Header {
+    @Html.ActionLink("Back", "Index", "Home", routeValues: null, htmlAttributes: new { data_icon = "arrow-l", @class = "ui-btn-left"  })
+    <h2>@ViewBag.Title</h2>
+    @Html.Partial("_LoginPartial")    
+}
+
+
+<div id='salesmanList' class="menu-buttonlist" data-enhance="false">
+    @{ Html.RenderPartial("SalesmanListControl", Model); }
+</div>
+
+<div id='salesmanAdvert' class="advert">
+    @{ Html.RenderPartial("SalesmanAdvert"); }
+</div>
+
+@Html.Partial("_geoRanking") 

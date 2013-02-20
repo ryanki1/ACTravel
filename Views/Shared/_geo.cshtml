@@ -1,0 +1,16 @@
+﻿<script type="text/javascript">
+    $("html").addClass("tut");
+</script>
+
+<script type="text/javascript">
+
+    function initGeoMap() {
+        debugger;
+        app.reset();
+        app.getUserCoordinates({ errorFlag: false }); // Results stored in localStorage
+        app.makeToySalesman(); // Results stored in app.selectedSalesman
+        window.tut.maps.initialize("app.googleMapsReady");
+        window.tut.maps.map_canvas($(".maps div")[0]);
+    }
+    initGeoMap();
+</script>
