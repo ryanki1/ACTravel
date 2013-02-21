@@ -17,8 +17,15 @@ namespace AddCon_TravellingSalesman.Models
         // 
         // System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<AddCon_TravellingSalesman.Models.AddConTravellingSalesmanContext>());
 
+
+        public AddConTravellingSalesmanContext()
+            : base("AddConTravellingSalesmanContextDatabase")
+        { 
+
+        }
         public DbSet<AddCon_TravellingSalesman.Models.SalesmanModel> SalesmanModels { get; set; }
         public DbSet<AddCon_TravellingSalesman.Models.EventModel> EventModel { get; set; }
+
     }
     //public class fred : DropCreateDatabaseAlways<AddConTravellingSalesmanContext>
     //{

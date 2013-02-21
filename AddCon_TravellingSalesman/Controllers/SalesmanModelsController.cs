@@ -34,6 +34,7 @@ namespace AddCon_TravellingSalesman.Controllers
         {
             //var orderedModel = context.SalesmanModels.ToList().OrderBy(salesman => salesman.LastName);
             //return View(orderedModel);
+            //context.Database.Connection.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ToString();
             return View(context.SalesmanModels.ToList().OrderBy(salesman => salesman.LastName));
         }
 

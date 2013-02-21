@@ -45,4 +45,3 @@ C:\Users\ryanki1\Documents\Visual Studio 2012\Projects\AddCon_TravellingSalesman
 C:\Users\ryanki1\Documents\Visual Studio 2012\Projects\AddCon_TravellingSalesman\AddCon_TravellingSalesman\obj\Debug\AddCon_TravellingSalesman.csproj.GenerateResource.Cache
 C:\Users\ryanki1\Documents\Visual Studio 2012\Projects\AddCon_TravellingSalesman\AddCon_TravellingSalesman\obj\Debug\AddCon_TravellingSalesman.dll
 C:\Users\ryanki1\Documents\Visual Studio 2012\Projects\AddCon_TravellingSalesman\AddCon_TravellingSalesman\obj\Debug\AddCon_TravellingSalesman.pdb
-C:\Users\ryanki1\documents\visual studio 2012\Projects\AddCon_TravellingSalesman\AddCon_TravellingSalesman\obj\Debug\AddCon_TravellingSalesman.csprojResolveAssemblyReference.cache
