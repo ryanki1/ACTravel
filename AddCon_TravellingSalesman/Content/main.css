@@ -5,7 +5,7 @@
     padding: 0;
 }
 body {
-    background: url("../images/background.jpg") repeat-x scroll left top #DDDEDD;
+    background: url("./images/background.jpg") repeat-x scroll left top #DDDEDD;
 }
 #container {
     margin-left: auto;
@@ -180,11 +180,11 @@ body {
 }
 
 .hover {
-    background: url("../images/menu-bg-addcon.gif") repeat-x scroll 0 0 transparent !important;
+    background: url("./images/menu-bg-addcon.gif") repeat-x scroll 0 0 transparent !important;
     text-decoration: none;
 }
 .menu-buttonlist ul li a, .menu-buttonlist ul li a:hover {
-    background: url("../images/menu-bg-inactive.gif") repeat-x scroll 0 0 transparent;
+    background: url("./images/menu-bg-inactive.gif") repeat-x scroll 0 0 transparent;
     color: #FFFFFF;
     display: block;
     height: 22px;
@@ -192,7 +192,7 @@ body {
     width: 440px;
 }
 .menu-buttonlist ul li a:hover {
-    background: url("../images/menu-bg-addcon.gif") repeat-x scroll 0 0 transparent;
+    background: url("./images/menu-bg-addcon.gif") repeat-x scroll 0 0 transparent;
     text-decoration: none;
 }
 .menu-buttonlist ul li#menuitem-424 a {

@@ -211,7 +211,7 @@
     <Compile Include="Utilities\ExtensionMethods.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\app\main.css">
+    <Content Include="Content\main.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\fonts\cabinsketch-regular.svg" />
@@ -478,6 +478,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\app\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

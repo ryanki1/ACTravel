@@ -8,15 +8,10 @@ namespace AddCon_TravellingSalesman
         // For more information on Bundling, visit http://go.microsoft.com/fwlink/?LinkId=254725
         public static void RegisterBundles(BundleCollection bundles)
         {
-            //bundles.Add(new ScriptBundle("~/bundles/salesman").Include(
-            //    "~/Scripts/App/Salesman.js"
-            //    ));
-            // GEO
+
             bundles.Add(new ScriptBundle("~/bundles/geo").Include(
                     "~/Scripts/tutScript.js"));
-            //bundles.Add(new StyleBundle("~/bundles/geoCss").Include(
-            //        "~/Content/tut-style.css"));
-            // GEO
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-1.*"));
 
@@ -33,14 +28,13 @@ namespace AddCon_TravellingSalesman
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                         "~/Scripts/App/config.js",
                         "~/Scripts/App/common.js",
-                        //"~/Scripts/App/geo.js",
                         "~/Scripts/App/app.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquerymobile").Include("~/Scripts/jquery.mobile*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/ts.css"));
 
-            bundles.Add(new StyleBundle("~/Content/app").Include("~/Content/app/*.css"));
+            bundles.Add(new StyleBundle("~/Content/app").Include("~/Content/main.css"));
 
             bundles.Add(new StyleBundle("~/Content/mobilecss").Include("~/Content/jquery.mobile*"));
 
