@@ -40,7 +40,7 @@ namespace AddCon_TravellingSalesman
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/ts.css"));
 
-            bundles.Add(new StyleBundle("~/Content/app").Include("~/Content/app/main.css"));
+            bundles.Add(new StyleBundle("~/Content/app").Include("~/Content/app/*.css"));
 
             bundles.Add(new StyleBundle("~/Content/mobilecss").Include("~/Content/jquery.mobile*"));
 
