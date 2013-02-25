@@ -14,13 +14,27 @@
     @Html.Partial("_LoginPartial")    
 }
 
-
-<div id='salesmanList' class="menu-buttonlist" data-enhance="false">
-    @{ Html.RenderPartial("SalesmanListControl", Model); }
+<div class="leftCol">
+	<h2>Left Column</h2>
+	<p>Left column is 250px by default. It can be extended by several classes to allow for additional layouts.</p>
+	<ul>
+		<li>.gMail = 160px</li>
+		<li>.gCal = 180px</li>
+		<li>.yahoo = 240px</li>
+		<li>.myYahoo = 300px</li>
+	</ul>
 </div>
-
-<div id='salesmanAdvert' class="advert">
+<div class="rightCol">
+	<h2>Right Column</h2>
+	<div id='salesmanAdvert' class="advert">
     @{ Html.RenderPartial("SalesmanAdvert"); }
+</div>
+</div>
+<div class="main">
+    <h2>Main</h2>
+	<div id='salesmanList' class="menu-buttonlist" data-enhance="false">
+    @{ Html.RenderPartial("SalesmanListControl", Model); }
+    </div>
 </div>
 
 @Html.Partial("_geoRanking") 

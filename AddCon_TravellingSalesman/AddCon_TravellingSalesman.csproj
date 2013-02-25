@@ -211,6 +211,8 @@
     <Compile Include="Utilities\ExtensionMethods.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\oocss_all.css" />
+    <Content Include="Content\oocss_content.css" />
     <Content Include="Content\main.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

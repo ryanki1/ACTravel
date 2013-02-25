@@ -80,8 +80,8 @@ namespace AddCon_TravellingSalesman.Controllers
             return d;         
         }
         //
-        // GET: /SalesmanModels/Details/5
-
+        // POST: /SalesmanModels/Details/5
+        [HttpPost]
         public ViewResult Details(int id)
         {
             SalesmanModel salesmanmodel = context.SalesmanModels.Single(x => x.ID == id);
