@@ -33,7 +33,8 @@ namespace AddCon_TravellingSalesman
             bundles.Add(new ScriptBundle("~/bundles/jquerymobile").Include("~/Scripts/jquery.mobile*"));
 
             bundles.Add(new StyleBundle("~/Content/oocss").Include("~/Content/oocss_all.css"
-                                                                    ,"~/Content/oocss_content"));
+                                                                    //,"~/Content/oocss_content"
+                                                                    ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/ts.css"));
 

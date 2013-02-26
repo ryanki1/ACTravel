@@ -211,8 +211,9 @@
     <Compile Include="Utilities\ExtensionMethods.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\jquery.mobile.acTravelSales.css" />
+    <Content Include="Content\jquery.mobile.acTravelSales.min.css" />
     <Content Include="Content\oocss_all.css" />
-    <Content Include="Content\oocss_content.css" />
     <Content Include="Content\main.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -237,6 +238,14 @@
     <Content Include="Content\jquery.mobile-1.1.0.min.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\oocss_core\core.css" />
+    <Content Include="Content\oocss_core\grid\grids.css" />
+    <Content Include="Content\oocss_core\grid\grids_all.html" />
+    <Content Include="Content\oocss_core\grid\grids_debug.css" />
+    <Content Include="Content\oocss_core\grid\grids_doc.html" />
+    <Content Include="Content\oocss_core\grid\grids_gutter.css" />
+    <Content Include="Content\oocss_core\grid\grids_iphone.css" />
+    <Content Include="Content\oocss_core\grid\grid_rtl.css" />
     <Content Include="Content\qunit-1.11.0.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -481,6 +490,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\app\" />
+    <Folder Include="Content\oocss_plugins\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

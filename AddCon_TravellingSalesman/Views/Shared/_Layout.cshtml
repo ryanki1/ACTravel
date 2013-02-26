@@ -5,10 +5,9 @@
         <title>@ViewBag.Title</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-        <link rel="stylesheet" type="text/css" media="all"  href="../../all.css" />
         @*<link href="~/Content/ts.css" rel="stylesheet" type="text/css" />*@
         @Styles.Render("~/Content/mobileCss", "~/Content/css")
-        @*@Styles.Render("~/Content/oocss")*@
+        @Styles.Render("~/Content/oocss")
         @Styles.Render("~/Content/app")
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/geo")  
@@ -19,7 +18,7 @@
         @RenderSection("headerIncludes",required:false)
     </head>
     <body>
-        <div data-role="page" data-theme="b" id="@ViewBag.PageId">
+        <div data-role="page" data-theme="a" id="@ViewBag.PageId">
             <div data-role="header">
                 @if (IsSectionDefined("Header")) {
                     @RenderSection("Header")

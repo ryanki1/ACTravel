@@ -81,7 +81,6 @@ namespace AddCon_TravellingSalesman.Controllers
         }
         //
         // POST: /SalesmanModels/Details/5
-        [HttpPost]
         public ViewResult Details(int id)
         {
             SalesmanModel salesmanmodel = context.SalesmanModels.Single(x => x.ID == id);

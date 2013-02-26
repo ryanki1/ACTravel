@@ -1,10 +1,40 @@
 ﻿@model IEnumerable<AddCon_TravellingSalesman.Models.SalesmanModel>
 
-<ul data-role="listview" data-inset="true" class="simpleList"> 
-    @foreach (var item in Model) {
-        <li>@Html.ActionLink(@item.EMail, "Details", new { id=item.ID }, htmlAttributes: new{ data_role="button" })</li>
-        @*<li><button formaction='@Url.Action("Details",new { id=item.ID })' type="button">@item.EMail</button></li>*@
-    }
-</ul>
+<div class="line">
+    <div class="unit size1of3">
+        <ul data-role="listview" data-inset="true"> 
+            @foreach (var item in Model) {
+                <li>
+                    <p>
+                        @Html.ActionLink(@item.EMail + ":col1", "Details", new { id=item.ID })
+                    </p>
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="unit size1of3">
+        <ul data-role="listview" data-inset="true"> 
+            @foreach (var item in Model) {
+                <li>
+                    <p>
+                        @Html.ActionLink(@item.EMail + ":col2", "Details", new { id=item.ID })
+                    </p>
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="unit size1of3 lastUnit">
+        <ul data-role="listview" data-inset="true"> 
+            @foreach (var item in Model) {
+                <li>
+                    <p>
+                        @Html.ActionLink(@item.EMail + ":col3", "Details", new { id=item.ID })
+                    </p>    
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
 
 
