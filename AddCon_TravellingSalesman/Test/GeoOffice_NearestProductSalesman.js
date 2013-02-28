@@ -7,6 +7,7 @@
     }
 });
 
+// Behaviour Tests
 test("As already discussed list should show salesman by amount of product expertise", function () {
     ok(true === true, "Success");
 })

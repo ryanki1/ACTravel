@@ -150,6 +150,7 @@
 	margin: 0;
 	white-space: pre-wrap;
 	word-wrap: break-word;
+    width: 200px; 
 }
 
 #qunit-tests del {
@@ -199,7 +200,7 @@
 	color: #710909;
 	background-color: #fff;
 	border-left: 10px solid #EE5757;
-	white-space: pre;
+	/*white-space: pre;*/
 }
 
 #qunit-tests > li:last-child {

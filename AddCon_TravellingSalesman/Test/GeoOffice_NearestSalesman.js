@@ -19,46 +19,6 @@ function geoTestCBError() {
     common_geoTestCBError();
 }
 
-function geoTestCBSequenceSalesmanSuccess(position) {
-    debugger;
-    app.geoRankingCallbackSuccess(position);
-    ok(app.userHasLocation() === true, "User now has a location");
-    app.showNearestFirstJSON(sequenceSalesmanSuccess, sequenceSalesmanError);
-}
-
-function geoTestCBSequenceSalesmanError() {
-    ok(true === true, "Dummy TestCBSequenceSalesmanError");
-    start();
-}
-
-function sequenceSalesmanSuccess(data, textStatus, jqXHR) {
-    debugger;
-    ok(data[0].LastName.toLowerCase() === "weinfurtner", "Nearest identified");
-    ok(data[1].LastName.toLowerCase() === "rensing", "2nd nearest identified");
-    ok(data[2].LastName.toLowerCase() === "joachim-knak", "3rd nearest identified");
-    ok(data[3].LastName.toLowerCase() === "fischer", "Furthest identified");
-    ok(data[3].Distance !== "undefined", "Distance in km available");
-    start();
-}
-
-function sequenceSalesmanError(jqXHR, testStatus, errorThrown) {
-    debugger;
-    ok(true === true, "Dummy test error");
-    start();
-}
-
-function geoTestCSSCBSequenceSalesmanSuccess(position) {
-    debugger;
-    app.geoRankingCallbackSuccess(position);
-    ok(app.userHasLocation() === true, "User now has a location");
-    app.showNearestFirst(sequenceSalesmanCSSSuccess, sequenceSalesmanCSSError);
-}
-
-function geoTestCSSCBSequenceSalesmanError() {
-    ok(true === true, "Dummy TestCBSequenceSalesmanError");
-    start();
-}
-
 function sequenceSalesmanCSSSuccess(responseHTML) {
     debugger;
     $("#salesmanList").html(responseHTML + "<p>Ordered by nearest first :-)</p>").trigger("create");

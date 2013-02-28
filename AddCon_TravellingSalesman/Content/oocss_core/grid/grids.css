@@ -3,11 +3,11 @@
 .unitRight{float:right;}
 .size1of1{float:none;}
 .size1of2{width:50%;}
-.size1of3{width:33.33333%; min-width:320px}
+.size1of3{width:33.33333%; min-width:290px}
 .size2of3{width:66.66666%;}
 .size1of4{width:25%;}
 .size3of4{width:75%;}
-.size1of5{width:20%;}
+.size1of5{width:20%; min-width:290px}
 .size2of5{width:40%;}
 .size3of5{width:60%;}
 .size4of5{width:80%;}

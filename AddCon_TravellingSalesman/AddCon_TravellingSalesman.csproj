@@ -214,9 +214,6 @@
     <Content Include="Content\jquery.mobile.acTravelSales.css" />
     <Content Include="Content\jquery.mobile.acTravelSales.min.css" />
     <Content Include="Content\oocss_all.css" />
-    <Content Include="Content\main.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Content\fonts\cabinsketch-regular.svg" />
     <Content Include="Content\images\ajax-loader.gif" />
     <Content Include="Content\images\ajax-loader.png" />
@@ -238,6 +235,7 @@
     <Content Include="Content\jquery.mobile-1.1.0.min.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\oocss_core\content.css" />
     <Content Include="Content\oocss_core\core.css" />
     <Content Include="Content\oocss_core\grid\grids.css" />
     <Content Include="Content\oocss_core\grid\grids_all.html" />
@@ -246,6 +244,8 @@
     <Content Include="Content\oocss_core\grid\grids_gutter.css" />
     <Content Include="Content\oocss_core\grid\grids_iphone.css" />
     <Content Include="Content\oocss_core\grid\grid_rtl.css" />
+    <Content Include="Content\oocss_core\libraries.css" />
+    <Content Include="Content\oocss_core\template\template.css" />
     <Content Include="Content\qunit-1.11.0.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -433,17 +433,19 @@
     <Content Include="SignalR.Sample\SignalR.StockTicker.js" />
     <Content Include="SignalR.Sample\StockTicker.css" />
     <Content Include="SignalR.Sample\StockTicker.html" />
-    <Content Include="Spec\GeoOffice_xyz.html" />
+    <Content Include="Spec\GeoOffice_xyz_iPad_iOS4.html" />
+    <Content Include="Spec\GeoOffice_xyz_iPhone_iOS4.html" />
     <Content Include="Spec\GeoOffice_NearestIndustrySalesman.html" />
     <Content Include="Spec\GeoOffice_NearestProductSalesman.html" />
     <Content Include="Spec\GeoOffice_NearestSalesman.html" />
     <Content Include="Spec\GeoOffice_Route.html" />
     <Content Include="Test\commonTest.js" />
+    <Content Include="Test\GeoOffice_xyz_iPad_iOS4.js" />
     <Content Include="Test\GeoOffice_NearestIndustrySalesman.js" />
     <Content Include="Test\GeoOffice_NearestProductSalesman.js" />
     <Content Include="Test\GeoOffice_NearestSalesman.js" />
     <Content Include="Test\GeoOffice_Route.js" />
-    <Content Include="Test\GeoOffice_xyz.js" />
+    <Content Include="Test\GeoOffice_xyz_iPhone_iOS4.js" />
     <Content Include="TrainingCRUD.svc" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
