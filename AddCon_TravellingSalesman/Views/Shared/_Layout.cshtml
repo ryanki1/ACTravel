@@ -3,23 +3,23 @@
     <head>             
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>@ViewBag.Title</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         @*<link href="~/Content/ts.css" rel="stylesheet" type="text/css" />*@
         @Styles.Render("~/Content/mobileCss", "~/Content/css")
         @Styles.Render("~/Content/oocss")
-        @Styles.Render("~/Content/app")
+        @Styles.Render("~/Content/appcss")
         @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jsRender")
         @Scripts.Render("~/bundles/geo")  
-        @Scripts.Render("~/bundles/app")    
         @Scripts.Render("~/bundles/jquerymobile")
-        @Scripts.Render("~/bundles/modernizr") 
-        @RenderSection("scripts", required: false)  
+        @Scripts.Render("~/bundles/app")    
+        @Scripts.Render("~/bundles/modernizr")  
         @RenderSection("headerIncludes",required:false)
     </head>
     <body>
-        <div data-role="page" data-theme="a" id="@ViewBag.PageId">
-            <div data-role="header">
+        <div data-role="page" data-theme="a" id="@ViewBag.PageId" data-fullscreen="true">
+            <div data-role="header" data-position="fixed">
                 @if (IsSectionDefined("Header")) {
                     @RenderSection("Header")
                 } else {
@@ -31,6 +31,7 @@
                 @RenderBody()                
             </div>
         </div>
+        @RenderSection("scripts", required: false)
         @*@Scripts.Render("~/bundles/jquery", "~/bundles/jquerymobile")*@
     </body>
 </html>

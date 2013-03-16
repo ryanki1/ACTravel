@@ -1,0 +1,79 @@
+﻿@charset "utf-8";
+
+#puttMat {
+clear: both;
+background-color: black;
+width: auto;
+height: 16px;
+}
+
+#puttMat ul {
+list-style-type: none;
+margin: 0px auto;
+}
+
+#puttMat ul li {
+display: inline;
+}
+
+#puttMat a:link, a:visited {
+float: left;
+height: 16px;
+background: -webkit-radial-gradient(circle, grey 20%, black 40%);
+background: -moz-radial-gradient(circle, grey 20%, black 40%);
+background: radial-gradient(circle, grey 20%, black 40%);
+}
+
+#puttMat a:hover, a:active {
+background: -webkit-radial-gradient(circle, white 20%, black 40%);
+background: -moz-radial-gradient(circle, white 20%, black 40%);
+background: radial-gradient(circle, white 20%, black 40%);
+}
+
+/* Alternative to above but more costly in terms of having underlying 16 x 32 sprite
+#puttMat a:link, #puttMat a:visited {
+float: left;
+height: 16px;
+background-image: url("../bilder/puttSprite.png");
+background-position: 0px -16px;
+background-repeat: no-repeat;
+-webkit-mask-box-image: -webkit-radial-gradient(circle, black 20%, transparent 40%);
+}
+
+#puttMat a:hover, a:active {
+background-image: url("../bilder/puttSprite.png");
+background-position: 0px 0px;
+background-repeat: no-repeat;
+-webkit-mask-box-image: -webkit-radial-gradient(circle, black 20%, transparent 40%);
+}
+*/
+
+.ballInTheHole {
+    background: -webkit-radial-gradient(circle, white 20%, black 40%)!important;
+    background: -moz-radial-gradient(circle, white 20%, black 40%)!important;
+    background: radial-gradient(circle, white 20%, black 40%)!important;
+}
+.activePage {
+    /*display: block;*/
+    visibility: visible;
+    /*position: absolute;*/
+}
+.row0 {
+   /*position: static;*/    /* We wish to preserve float on 1st row for grid-size 3 */
+                        /* grid-size 5? */
+}
+.inactivePage {
+    visibility: hidden;
+    /*display: none;*/
+}
+.main {
+    padding-top: 75px;
+    position: relative;
+    overflow: hidden;
+}
+.unaffectLayout {
+    display: none;
+}
+.affectLayout {
+    display: block;
+}

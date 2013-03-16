@@ -1,35 +1,62 @@
 ﻿@model IEnumerable<AddCon_TravellingSalesman.Models.SalesmanModel>
 
 <div class="line">
-    <div class="unit size1of3">
-        <ul data-role="listview" data-inset="true"> 
+    <div class="unit size1of5 inactivePage">
+        <ul data-role="listview" data-inset="true" data-split-icon="gear"> 
             @foreach (var item in Model) {
                 <li>
+                    <img src="~/Content/images/salesmanPlaceholder.jpg"/>
                     <p>
-                        @Html.ActionLink(@item.EMail + ":col1", "Details", new { id=item.ID })
+                        @Html.ActionLink("200km" + ":col1", "Details", new { id=item.ID }) <!-- @item.EMail -->
                     </p>
                 </li>
             }
         </ul>
     </div>
-    <div class="unit size1of3">
-        <ul data-role="listview" data-inset="true"> 
+    <div class="unit size1of5 inactivePage">
+        <ul data-role="listview" data-inset="true" data-split-icon="gear"> 
             @foreach (var item in Model) {
                 <li>
+                    <img src="~/Content/images/salesmanPlaceholder.jpg"/>
                     <p>
-                        @Html.ActionLink(@item.EMail + ":col2", "Details", new { id=item.ID })
+                        @Html.ActionLink("Bio-Mulch" + ":col2", "Details", new { id=item.ID })
                     </p>
                 </li>
             }
         </ul>
     </div>
-    <div class="unit size1of3 lastUnit">
-        <ul data-role="listview" data-inset="true"> 
+    <div class="unit size1of5 inactivePage">
+        <ul data-role="listview" data-inset="true" data-split-icon="gear"> 
             @foreach (var item in Model) {
                 <li>
+                    <img src="~/Content/images/salesmanPlaceholder.jpg"/>
                     <p>
-                        @Html.ActionLink(@item.EMail + ":col3", "Details", new { id=item.ID })
+                        @Html.ActionLink("Food" + ":col3", "Details", new { id=item.ID })
                     </p>    
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="unit size1of5 inactivePage">
+        <ul data-role="listview" data-inset="true" data-split-icon="gear"> 
+            @foreach (var item in Model) {
+                <li>
+                    <img src="~/Content/images/salesmanPlaceholder.jpg"/>
+                    <p>
+                        @Html.ActionLink("200km" + ":col1", "Details", new { id=item.ID }) <!-- @item.EMail -->
+                    </p>
+                </li>
+            }
+        </ul>
+    </div>
+    <div class="unit size1of5 lastUnit inactivePage">
+        <ul data-role="listview" data-inset="true" data-split-icon="gear"> 
+            @foreach (var item in Model) {
+                <li>
+                    <img src="~/Content/images/salesmanPlaceholder.jpg"/>
+                    <p>
+                        @Html.ActionLink("Bio-Mulch" + ":col2", "Details", new { id=item.ID })
+                    </p>
                 </li>
             }
         </ul>

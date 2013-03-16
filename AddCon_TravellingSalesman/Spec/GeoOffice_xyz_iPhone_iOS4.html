@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="../Content/oocss_core/content.css">
 <link rel="stylesheet" href="../Content/oocss_core/libraries.css">
 <link rel="stylesheet" href="../Content/oocss_core/template/template.css">
+<link rel="stylesheet" href="../Content/app.css"> <!-- for e.g. puttMat -->
 </head>
 <body>
     <div data-role="page" data-theme="a" id="salesmanTravelling">
@@ -28,13 +29,29 @@
             </article>
         </div>
         <div data-role="content">
+            <div class="header">
+                <div id="puttMat">
+                    <ul id="puttMatList">
+                    </ul>
+                </div>
+            </div>
             <div class="main">
                 <h2>Main</h2>
                 <div id="salesmanList" data-enhance="true"></div>
             </div>
         </div>               
     </div>
+    <script id="pagePuttTemplate" type="text/x-jsrender">
+      {{for List}}
+          <li>
+              <a href="#">
+                  <img src="../Content/images/puttPlug.png" />
+              </a>
+          </li>
+      {{/for}}             
+    </script>
     <script src="../Scripts/jquery-1.8.2.js"></script>
+    <script src="../Scripts/jsrender.js"></script>
     <script src="../Scripts/qunit-1.11.0.js"></script>
     <script src="../Scripts/tutScript.js"></script>
     <!--<script src="../Scripts/App/geo.js"></script>-->

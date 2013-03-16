@@ -1,5 +1,5 @@
 ﻿function geoAllowLocateUser(position) {
-    debugger;
+    //debugger;
     log("User location locked-on.");
     if (position) {
         localStorage.lng = position.coords.longitude;

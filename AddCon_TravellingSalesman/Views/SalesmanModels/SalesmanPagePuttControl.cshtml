@@ -1,0 +1,37 @@
+﻿
+<script id="pagePuttTemplate" type="text/x-jsrender">
+    {{for List}}
+        <li>
+            <a href="#">
+                <img src="../../Content/images/puttPlug.png" />
+            </a>
+        </li>
+    {{/for}}             
+</script>
+
+<script type="text/javascript">
+    $(document).bind("pageshow", function (evt) {
+        debugger;
+        app.primePuttMat();
+        app.scorePuttMatRows();
+        app.teeOff();
+    });
+    $('body').live('swipeleft swiperight', function (event) {
+        if (event.type == "swiperight") {
+            alert("swipped right side");
+        }
+        if (event.type == "swipeleft") {
+            alert("swipped left side");
+        }
+        event.preventDefault();
+    });
+</script>
+}
+    });
+</script>
+
+<div id="puttMat">
+    <ul id="puttMatList">
+    </ul>
+</div>
+

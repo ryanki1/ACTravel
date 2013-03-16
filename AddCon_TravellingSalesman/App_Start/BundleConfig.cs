@@ -12,6 +12,9 @@ namespace AddCon_TravellingSalesman
             bundles.Add(new ScriptBundle("~/bundles/geo").Include(
                     "~/Scripts/tutScript.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/jsRender").Include(
+                    "~/Scripts/jsRender.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-1.*"));
 
@@ -53,6 +56,7 @@ namespace AddCon_TravellingSalesman
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+            bundles.Add(new StyleBundle("~/Content/appcss").Include("~/Content/app.css"));
         }
     }
 }

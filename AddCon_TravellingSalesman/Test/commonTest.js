@@ -36,7 +36,7 @@ function geoTestCBSequenceSalesmanError() {
 }
 
 function geoTestCSSCBSequenceSalesmanSuccess(position) {
-    debugger;
+    //debugger;
     app.geoRankingCallbackSuccess(position);
     ok(app.userHasLocation() === true, "User now has a location");
     app.showNearestFirst(sequenceSalesmanCSSSuccess, sequenceSalesmanCSSError);
@@ -47,4 +47,8 @@ function geoTestCSSCBSequenceSalesmanError() {
     start();
 }
 
-
+function pagePuttCount() {
+    //debugger;
+    var numPages = app.getPageFlickCount();
+    ok($("#puttMatList li").length === numPages, "Success");
+}

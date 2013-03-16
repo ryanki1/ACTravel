@@ -1,4 +1,4 @@
-﻿module("GeoOffice on a iPad", {
+﻿module("GeoOffice on an Android", {
 });
 
 // CSS Tests - assume userAgent is chrome iOS 4.0 with dimensions 320 x 480
@@ -6,12 +6,12 @@
 function sequenceSalesmanCSSSuccess(data, textStatus, jqXHR) {
     debugger;
     $("#salesmanList").html(jqXHR.responseText).trigger("create");
-    ok(navigator.userAgent.toLowerCase().indexOf("ipad") >= 0, "iPad browser confirmed");
-    ok(screen.width === 768, "iPad mimicked screen width is 768 as required");
-    ok(screen.width === $(document).width(), "iPad mimicked document width is good - no horizontal scrollbars");
-    ok(screen.height === 1024, "iPad mimicked screen height is 1024 as required");
-    ok($("div.size1of3").first().width() === 290, "iPad mimicked width of first list is 290 as required");
-    ok($("div.size1of3").last().width() === 738, "iPad mimicked width of last list is 738 as required");
+    ok(navigator.userAgent.toLowerCase().indexOf("android") >= 0, "Android browser confirmed");
+    ok(screen.width === 320, "Galaxy S Duos mimicked screen width is 320 as required");
+    ok(screen.width === $(document).width(), "Galaxy S Duos mimicked document width is good - no horizontal scrollbars");
+    ok(screen.height === 480, "Galaxy S Duos mimicked height is 480 as required");
+    ok($("div.size1of3").last().width() === 290, "Galaxy S Duos mimicked width of first list is 290 as required");
+    ok($("div.size1of3").last().width() === 290, "Galaxy S Duos mimicked width of last list is 290 as required");
     start();
 }
 
@@ -74,45 +74,3 @@ test("As already discussed salesman list should show columns for distance, produ
 test("As already discussed salesman list should show bigger version of ipad", function () {
     ok(true === true, "Success");
 })
-
-module("GeoOffice on a iPad: flicking to left or right should show salesman by distance, product, industry, distance, product (5 column grid)", {
-});
-
-asyncTest("As already discussed iPhone document and device dimensions should match i.e. no scrollbars", function () {
-    // Ajax call responsible for getting the salesman data
-    // Called a second time because ajax call is module dependant.
-    //debugger;
-    app.getUserCoordinates({ errorFlag: false }, geoTestCSSCBSequenceSalesmanSuccess, geoTestCSSCBSequenceSalesmanError);
-})
-
-test("As already discussed selecting hole 2 should show columns side by side", function () {
-    if ($(".size1of5").length > 0) {
-        var numPages = app.primePuttMat();
-        app.scorePuttMatRows();
-        if (numPages > 1) {
-            //debugger;
-            var secondHole = 1;
-            $("#puttMat a:eq(" + secondHole + ")").trigger("click"); // Simulate tapping second hole
-            var leftStackedColCount = 0;
-            var lastOffsetLeft = new Array(); // Ich bin here
-            $.each($(".activePage"), function (index, ele) {
-                debugger;
-                var offsetLeft = $(ele).offset().left;
-                if (lastOffsetLeft.indexOf(offsetLeft) >= 0) {
-                    leftStackedColCount = leftStackedColCount + 1;
-                }
-                else {
-                    lastOffsetLeft.push(offsetLeft);
-                }
-            });
-            ok(leftStackedColCount <= 1, "Columns showing on page 2 selection");
-        }
-        else {
-            expect(0);
-        }
-    }
-    else {
-        expect(0);
-    }
-    
-});

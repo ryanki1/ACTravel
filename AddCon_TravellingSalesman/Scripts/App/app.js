@@ -21,7 +21,7 @@
         log("Error - User location not locked on.");
     },
     showNearestFirst: function(geoTestCBSuccess, geoTestCBError){
-        debugger;
+        //debugger;
         if (localStorage.lat)
         {
             $.ajax({
@@ -45,7 +45,7 @@
         }
     },
     geoRankingCallbackSuccess: function (position) {
-        debugger;
+        //debugger;
         geoAllowLocateUser(position);
     },
     geoRankingCallbackError: function () {
@@ -139,11 +139,91 @@
         app.setSalesman(params);
     },
     googleMapsReady: function () {
-        debugger;
+        //debugger;
         var userLat = app.user.coords ? app.user.coords.latitude : null;
         var userLong = app.user.coords ? app.user.coords.longitude : null;
         //var ret = tut.maps.ready([userLat, userLong]);
         tut.maps.origin = new google.maps.LatLng(app.selectedSalesman.coords.latitude, app.selectedSalesman.coords.longitude);
         return tut.maps.drawRoute([userLat, userLong]);
+    },
+    // Salesmanlist puttControl
+    getPageFlickCount: function (leaveImpression) {
+        debugger;
+        var numPages = 0;
+        var leadingTop = -1;
+        $.each($(".unit"), function (index,ele) {
+            debugger;
+            var coordinates = $(ele).offset();
+            if (coordinates.top > leadingTop) {
+                numPages = numPages + 1;
+                leadingTop = coordinates.top;
+            }
+            if (leaveImpression) {
+                $(ele).addClass("row" + (numPages-1));
+            }
+        });
+        return numPages;
+    },
+    scorePuttMatRows: function () {
+        //debugger;
+        var leaveImpression = true;
+        app.getPageFlickCount(leaveImpression);
+    },
+    primePuttMat: function() {
+        // For every page (row) create a hole for putting
+        //debugger;
+        var numPages = app.getPageFlickCount();
+        var modelStr = "{\"List\":[";
+        for (var i = 0; i < numPages; i++) {
+            modelStr = modelStr + "{\"dummy\": \"0\"},";
+        }
+        modelStr = modelStr.substring(0, modelStr.length-1) + "]}" ; // Remove trailing comma and finish up
+        app.unwravelMat($.parseJSON(modelStr));
+        // Wireup clickability of holes
+        $.each($("#puttMat a"), function(index, ele) {
+            //debugger;
+            $(ele).click(function(evt) {
+                //debugger;
+                app.teeOff(index);
+            });
+        });
+        return numPages;
+    },
+    unwravelMat: function (model) {
+        //debugger;
+      $('#puttMatList').html($('#pagePuttTemplate').render(model));
+    },
+    resetPuttMat: function () {
+        $(".ballInTheHole").removeClass("ballInTheHole");
+    },
+    teeOff: function (index) {
+        //debugger;
+        app.resetPuttMat();
+        if (index >= 0) {
+            $("#puttMat a:eq(" + index + ")").addClass("ballInTheHole");
+            app.cuePuttMatRow(index);
+        }
+        else {
+            $("#puttMat a:first").addClass("ballInTheHole");
+            app.cuePuttMatRow(0);
+        }
+    },
+    resetPuttMatRows: function () {
+        $(".activePage").removeClass("activePage").addClass("inactivePage");
+    },
+    cuePuttMatRow: function (hole) {
+        app.resetPuttMatRows();
+        $.each($("div .unit"), function (index, ele) {
+            //debugger;
+            if ($(ele).hasClass("row" + hole)) {
+                $(ele).removeClass("unaffectLayout").addClass("affectLayout");
+                $(ele).removeClass("inactivePage").addClass("activePage");
+            }
+            else {
+                // Inactive rows should disappear so that active row positioned at the top 
+                $(ele).removeClass("affectLayout").addClass("unaffectLayout");
+                $(ele).removeClass("activePage").addClass("inactivePage");
+            }
+        });        
     }
 }

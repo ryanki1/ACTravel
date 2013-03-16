@@ -211,6 +211,9 @@
     <Compile Include="Utilities\ExtensionMethods.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\app.css" />
+    <Content Include="Content\images\puttPlug.png" />
+    <Content Include="Content\images\salesmanPlaceholder.jpg" />
     <Content Include="Content\jquery.mobile.acTravelSales.css" />
     <Content Include="Content\jquery.mobile.acTravelSales.min.css" />
     <Content Include="Content\oocss_all.css" />
@@ -245,6 +248,10 @@
     <Content Include="Content\oocss_core\grid\grids_iphone.css" />
     <Content Include="Content\oocss_core\grid\grid_rtl.css" />
     <Content Include="Content\oocss_core\libraries.css" />
+    <Content Include="Content\oocss_core\media\assets\crystal_project\16x16\actions\1day.png" />
+    <Content Include="Content\oocss_core\media\assets\crystal_project\32x32\actions\player_play.png" />
+    <Content Include="Content\oocss_core\media\assets\crystal_project\readme.txt" />
+    <Content Include="Content\oocss_core\media\media.css" />
     <Content Include="Content\oocss_core\template\template.css" />
     <Content Include="Content\qunit-1.11.0.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -392,6 +399,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\jsrender.js" />
     <Content Include="Scripts\knockout-2.1.0.debug.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -433,6 +441,7 @@
     <Content Include="SignalR.Sample\SignalR.StockTicker.js" />
     <Content Include="SignalR.Sample\StockTicker.css" />
     <Content Include="SignalR.Sample\StockTicker.html" />
+    <Content Include="Spec\GeoOffice_xyz_android_4.html" />
     <Content Include="Spec\GeoOffice_xyz_iPad_iOS4.html" />
     <Content Include="Spec\GeoOffice_xyz_iPhone_iOS4.html" />
     <Content Include="Spec\GeoOffice_NearestIndustrySalesman.html" />
@@ -440,6 +449,7 @@
     <Content Include="Spec\GeoOffice_NearestSalesman.html" />
     <Content Include="Spec\GeoOffice_Route.html" />
     <Content Include="Test\commonTest.js" />
+    <Content Include="Test\GeoOffice_xyz_android_4.js" />
     <Content Include="Test\GeoOffice_xyz_iPad_iOS4.js" />
     <Content Include="Test\GeoOffice_NearestIndustrySalesman.js" />
     <Content Include="Test\GeoOffice_NearestProductSalesman.js" />
@@ -455,9 +465,6 @@
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Content\Site.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\_references.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -488,6 +495,7 @@
     <Content Include="Views\SalesmanModels\dummySelector.cshtml" />
     <Content Include="Views\SalesmanModels\SalesmanAdvert.cshtml" />
     <Content Include="Views\Shared\_geoRanking.cshtml" />
+    <Content Include="Views\SalesmanModels\SalesmanPagePuttControl.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
