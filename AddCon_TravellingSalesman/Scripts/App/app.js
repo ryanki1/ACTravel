@@ -196,6 +196,21 @@
     resetPuttMat: function () {
         $(".ballInTheHole").removeClass("ballInTheHole");
     },
+    getPuttMatBallIndex: function () {
+        var ballIndex = -1;
+        $.each($("#puttMat a"), function (index, ele) {
+            debugger;
+            if ($(ele).hasClass("ballInTheHole")) {
+                debugger;
+                ballIndex = index;
+                return false;
+            }
+        });
+        return ballIndex;
+    },
+    getPuttMatHoles: function () {
+        return $("#puttMat a").length;
+    },
     teeOff: function (index) {
         //debugger;
         app.resetPuttMat();

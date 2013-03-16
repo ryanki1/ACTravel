@@ -18,10 +18,17 @@
     });
     $('body').live('swipeleft swiperight', function (event) {
         if (event.type == "swiperight") {
-            alert("swipped right side");
+            debugger;
+            var index = app.getPuttMatBallIndex();
+            var range = app.getPuttMatHoles() - 1;
+            index = index == range ? index : index + 1;
+            app.teeOff(index);
         }
         if (event.type == "swipeleft") {
-            alert("swipped left side");
+            debugger;
+            var index = app.getPuttMatBallIndex();
+            index = index == 0 ? 0 : index - 1;
+            app.teeOff(index);
         }
         event.preventDefault();
     });
