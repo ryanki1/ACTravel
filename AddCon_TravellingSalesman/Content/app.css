@@ -19,15 +19,17 @@ display: inline;
 #puttMat a:link, a:visited {
 float: left;
 height: 16px;
-background: -webkit-radial-gradient(circle, grey 20%, black 40%);
-background: -moz-radial-gradient(circle, grey 20%, black 40%);
-background: radial-gradient(circle, grey 20%, black 40%);
+background: -webkit-gradient( radial, 8 8, 2, 8 8, 4, from(grey), to(black));
+/*background: -webkit-radial-gradient(circle, grey 20%, black 40%);*/
+/*background: -moz-radial-gradient(circle, grey 20%, black 40%);
+background: radial-gradient(circle, grey 20%, black 40%);*/
 }
 
 #puttMat a:hover, a:active {
-background: -webkit-radial-gradient(circle, white 20%, black 40%);
-background: -moz-radial-gradient(circle, white 20%, black 40%);
-background: radial-gradient(circle, white 20%, black 40%);
+background: -webkit-gradient( radial, 8 8, 2, 8 8, 4, from(white), to(black));
+/*background: -webkit-radial-gradient(circle, white 20%, black 40%);*/
+/*background: -moz-radial-gradient(circle, white 20%, black 40%);
+background: radial-gradient(circle, white 20%, black 40%);*/
 }
 
 /* Alternative to above but more costly in terms of having underlying 16 x 32 sprite
@@ -49,9 +51,10 @@ background-repeat: no-repeat;
 */
 
 .ballInTheHole {
-    background: -webkit-radial-gradient(circle, white 20%, black 40%)!important;
+    background: -webkit-gradient( radial, 8 8, 2, 8 8, 4, from(white), to(black))!important;
+    /*background: -webkit-radial-gradient(circle, white 20%, black 40%)!important;
     background: -moz-radial-gradient(circle, white 20%, black 40%)!important;
-    background: radial-gradient(circle, white 20%, black 40%)!important;
+    background: radial-gradient(circle, white 20%, black 40%)!important;*/
 }
 .activePage {
     /*display: block;*/

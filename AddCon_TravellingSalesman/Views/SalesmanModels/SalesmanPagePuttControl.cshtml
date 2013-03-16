@@ -20,14 +20,14 @@
         if (event.type == "swiperight") {
             debugger;
             var index = app.getPuttMatBallIndex();
-            var range = app.getPuttMatHoles() - 1;
-            index = index == range ? index : index + 1;
+            index = index == 0 ? 0 : index - 1;
             app.teeOff(index);
         }
         if (event.type == "swipeleft") {
             debugger;
             var index = app.getPuttMatBallIndex();
-            index = index == 0 ? 0 : index - 1;
+            var range = app.getPuttMatHoles() - 1;
+            index = index == range ? index : index + 1;
             app.teeOff(index);
         }
         event.preventDefault();
