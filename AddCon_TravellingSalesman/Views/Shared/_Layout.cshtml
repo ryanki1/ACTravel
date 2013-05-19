@@ -6,16 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
         @*<link href="~/Content/ts.css" rel="stylesheet" type="text/css" />*@
-        @Styles.Render("~/Content/mobileCss", "~/Content/css")
-        @Styles.Render("~/Content/oocss")
+        @Styles.Render("~/Content/thirdPartyCSS")
         @Styles.Render("~/Content/appcss")
-        @*@Scripts.Render("~/bundles/thirdParty")
-        @Scripts.Render("~/bundles/geo")  *@
-        @*@Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/jsRender")
-        @Scripts.Render("~/bundles/jquerymobile")*@
-        @*@Scripts.Render("~/bundles/app")    *@
-        @*@Scripts.Render("~/bundles/modernizr")  *@
         @RenderSection("headerIncludes",required:false)
     </head>
     <body>
