@@ -10,28 +10,7 @@
 </script>
 
 <script type="text/javascript">
-    $(document).bind("pageshow", function (evt) {
-        debugger;
-        app.primePuttMat();
-        app.scorePuttMatRows();
-        app.teeOff();
-    });
-    $('body').live('swipeleft swiperight', function (event) {
-        if (event.type == "swiperight") {
-            debugger;
-            var index = app.getPuttMatBallIndex();
-            index = index == 0 ? 0 : index - 1;
-            app.teeOff(index);
-        }
-        if (event.type == "swipeleft") {
-            debugger;
-            var index = app.getPuttMatBallIndex();
-            var range = app.getPuttMatHoles() - 1;
-            index = index == range ? index : index + 1;
-            app.teeOff(index);
-        }
-        event.preventDefault();
-    });
+  $(document).bind("pageshow", function (e) { debugger; app.primePuttMat(); app.scorePuttMatRows(); app.teeOff() }); $("body").live("swipeleft swiperight", function (e) { if (e.type == "swiperight") { debugger; var t = app.getPuttMatBallIndex(); t = t == 0 ? 0 : t - 1; app.teeOff(t) } if (e.type == "swipeleft") { debugger; var t = app.getPuttMatBallIndex(); var n = app.getPuttMatHoles() - 1; t = t == n ? t : t + 1; app.teeOff(t) } e.preventDefault() })
 </script>
 }
     });
