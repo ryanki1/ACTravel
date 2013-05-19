@@ -9,12 +9,13 @@
         @Styles.Render("~/Content/mobileCss", "~/Content/css")
         @Styles.Render("~/Content/oocss")
         @Styles.Render("~/Content/appcss")
-        @Scripts.Render("~/bundles/jquery")
+        @*@Scripts.Render("~/bundles/thirdParty")
+        @Scripts.Render("~/bundles/geo")  *@
+        @*@Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/jsRender")
-        @Scripts.Render("~/bundles/geo")  
-        @Scripts.Render("~/bundles/jquerymobile")
-        @Scripts.Render("~/bundles/app")    
-        @Scripts.Render("~/bundles/modernizr")  
+        @Scripts.Render("~/bundles/jquerymobile")*@
+        @*@Scripts.Render("~/bundles/app")    *@
+        @*@Scripts.Render("~/bundles/modernizr")  *@
         @RenderSection("headerIncludes",required:false)
     </head>
     <body>
@@ -31,6 +32,9 @@
                 @RenderBody()                
             </div>
         </div>
+        @Scripts.Render("~/bundles/thirdParty")
+        @Scripts.Render("~/bundles/geo")  
+        @Scripts.Render("~/bundles/app")    
         @RenderSection("scripts", required: false)
         @*@Scripts.Render("~/bundles/jquery", "~/bundles/jquerymobile")*@
     </body>

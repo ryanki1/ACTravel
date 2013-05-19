@@ -9,31 +9,40 @@ namespace AddCon_TravellingSalesman
         public static void RegisterBundles(BundleCollection bundles)
         {
 
+            bundles.Add(new ScriptBundle("~/bundles/thirdParty").Include(
+                    "~/Scripts/jsRender.js",
+                    "~/Scripts/jquery-1.*",
+                    "~/Scripts/jquery-ui*",
+                    "~/Scripts/jquery.unobtrusive*",
+                    "~/Scripts/jquery.validate*",
+                    "~/Scripts/modernizr-*",
+                    "~/Scripts/jquery.mobile*"
+                    ));
             bundles.Add(new ScriptBundle("~/bundles/geo").Include(
                     "~/Scripts/tutScript.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jsRender").Include(
-                    "~/Scripts/jsRender.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/jsRender").Include(
+            //        "~/Scripts/jsRender.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-1.*"));
+            //bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+            //            "~/Scripts/jquery-1.*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
-                        "~/Scripts/jquery-ui*"));
+            //bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
+            //            "~/Scripts/jquery-ui*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
-                        "~/Scripts/jquery.unobtrusive*",
-                        "~/Scripts/jquery.validate*"));
+            //bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
+            //            "~/Scripts/jquery.unobtrusive*",
+            //            "~/Scripts/jquery.validate*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/modernizr-*"));
+            //bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
+            //            "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                         "~/Scripts/App/config.js",
                         "~/Scripts/App/common.js",
                         "~/Scripts/App/app.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jquerymobile").Include("~/Scripts/jquery.mobile*"));
+            //bundles.Add(new ScriptBundle("~/bundles/jquerymobile").Include("~/Scripts/jquery.mobile*"));
 
             bundles.Add(new StyleBundle("~/Content/oocss").Include("~/Content/oocss_all.css"
                                                                     //,"~/Content/oocss_content"
